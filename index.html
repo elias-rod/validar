@@ -5,17 +5,53 @@
 function copyCode() {
 var code = document.getElementById("code").innerHTML;
 navigator.clipboard.writeText(code);
-
-  // Alert the copied text
-  alert("Código colado: " + code);
+var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copiado!;
 }
 </script>
+<style>
+  .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+</style>
   </head>
 <body>
   <h1>VALIDAR IDENTIDADE</h1>
   <h2>🔑 Código de Controle</h2>
   <p id="code">26B7C9F51853ADBC8774FE9AB12184B9</p>
-  <button onclick="copyCode()">Colar código2</button> 
+  <button onclick="copyCode()">
+    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+    Colar código3
+  </button> 
   <h2>🪪 Instruções</h2>
   <ol>
     <li>Acesse o 
