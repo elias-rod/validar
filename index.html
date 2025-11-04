@@ -6,6 +6,7 @@
   position: relative;
   display: inline-block;
 }
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 140px;
@@ -22,6 +23,7 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
+
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
@@ -32,17 +34,17 @@
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
+
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
 </style>
-
 <script>
 function copyCode() {
   var code = document.getElementById("code").innerHTML;
   navigator.clipboard.writeText(code);
-  var tooltip = document.getElementById("myTooltip");
+  var tooltip = document.getElementById("tooltip");
   tooltip.innerHTML = "Copiado!;
 }
 </script>
@@ -53,8 +55,8 @@ function copyCode() {
   <h2>🔑 Código de Controle</h2>
   <span id="code">26B7C9F51853ADBC8774FE9AB12184B9</span>
   <button onclick="copyCode()">
-    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-    Colar código6
+    <span class="tooltiptext" id="tooltip">Copy to clipboard</span>
+    Colar código7
   </button> 
   <h2>🪪 Instruções</h2>
   <ol>
