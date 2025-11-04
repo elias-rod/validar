@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+<script>
+function copyCode() {
+var copyText = document.getElementById("code");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Código colado: " + copyText.value);
+}
+}
+</script>
+  </head>
 <body>
   <h1>VALIDAR IDENTIDADE</h1>
   <h2>🔑 Código de Controle</h2>
-  <p>26B7C9F51853ADBC8774FE9AB12184B9</p>
+  <p id="code">26B7C9F51853ADBC8774FE9AB12184B9</p>
+  <button onclick="copyCode()">Colar código</button> 
   <h2>🪪 Instruções</h2>
   <ol>
     <li>Acesse o 
