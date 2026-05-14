@@ -2,9 +2,9 @@
 <html>
 <head>
 <script>
-function copyKey() {
-  var key = document.getElementById("key").innerHTML;
-  navigator.clipboard.writeText(key);
+function copy(field) {
+  var fieldCopied = document.getElementById(field).innerHTML;
+  navigator.clipboard.writeText(fieldCopied);
 }
 </script>
 <style>
@@ -30,12 +30,10 @@ h2 {
   <ol>
     <li>Acessar o 
 <a target="_blank" href="https://servicos.pf.gov.br/sismigra-internet/faces/publico/verificarProtocolo/verificarProtocolo.seam">Sistema de Registro Nacional Migratório</a></li>
-    <li>Inserir a data de nascimento</li>
-    <li>Copiar o código de controle <button onclick="copyKey()">Copiar</button><span id=key>26B7C9F51853ADBC8774FE9AB12184B9</span></li>
-    <li>Colar o código de controle no formulario</li>
+    <li>Inserir a data de nascimento <button onclick="copy("dob")">Copiar</button><span id=dob>18/01/1988</span></li>
+    <li>Inserir o código de controle <button onclick="copy("key")">Copiar</button><span id=key>26B7C9F51853ADBC8774FE9AB12184B9</span></li>
     <li>Resolver o desafio de segurança</li>
     <li>Apertar botão "Validar"</li>
-    <li>Conferir o resultado da validação abaixo</li>
   </ol>
 </body>
 </html> 
